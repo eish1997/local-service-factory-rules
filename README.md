@@ -1,13 +1,13 @@
 # 本地生活服务图片工厂：规则数据
 
-本仓库分发项目规则、场景变量和提示词配置；软件安装包在[软件仓库](https://github.com/eish1997/local-service-factory-releases)。
+规则版本 **1790782473702205200**：[规则Release](https://github.com/eish1997/local-service-factory-rules/releases/tag/rules-1790782473702205200)，最低软件版本 **1.4.2**。[软件安装包](https://github.com/eish1997/local-service-factory-releases/releases/download/v1.4.2/LocalServiceFactory-1.4.2-setup.exe)。`release-index.json` 指向签名校验后的最新规则，客户端原子激活。
 
-规则版本 **1790778405162892300**：[规则 Release](https://github.com/eish1997/local-service-factory-rules/releases/tag/rules-1790778405162892300)，最低软件版本 **1.4.1**。`release-index.json` 指向签名校验后的最新规则；客户端自动下载并原子激活。
+本次只改两份数据：`configs/postprocess.json` 与 `projects/truck_rescue/variable_catalog.json`。电话底板固定透明，模板内随机不能重新添加；电话字号、居中、配色和描边保留，服务词底板继续允许变化。货车目录revision5启用10种手机和10种专业相机变量；专业相机分支与三拼满画布修复由软件1.4.2提供，不把Python代码放入规则包。
 
-本次更新后处理模板与货车变量目录。后处理包含 18 个结构组合及模板内变化；汽车救援、货车救援的新共享批次自动轮换模板，电话居中放大，服务词允许独立颜色、描边、底板和轻微旋转。预设只定义设计参数，电话和服务内容仍取当前任务的确认数据。旧批次保留冻结版本，已有成品不会自动重做。
+18个结构模板与4个兼容预设继续使用当前任务的确认电话和服务词。汽车/货车新共享批次自动轮换结构，旧批次保留冻结版本，已有图片不会自动重做。相机参数仅描述生成风格，不证明真实设备拍摄。
 
-规则包包含 **37 个白名单数据文件**，八业务组装检查通过。图片、电话、任务、预览记录、随机结果、凭证及机器路径不进入公开规则包。ZIP SHA256：`7d8952d831468b7166fb7d349dc6d6498a5f733fdbb70e3166b331c4c93f603a`。
+完整规则包37个白名单数据文件、八业务检查通过。客户电话、图片、任务、随机结果、预览、凭证及机器路径均不发布。ZIP SHA256：`4ece3eb7daecaa9505fcf737c69ed94e11ac7ab353fba0754a3bd99438e30b10`。
 
-公开下载、Ed25519 签名以及隔离使用端「首次更新 → 再次已是最新」验证通过。软件代码通过安装包分发，兼容的规则参数通过本仓库更新。
+真实公开下载、Ed25519签名、全新独立引擎使用端首次updated→再次current以及活动指针/manifest一致验证通过。因既有代理共享出口匿名API限流，隔离验证子进程使用官方API直连、资源仍经既有代理，无发布凭证；未修改应用协议。维护端同步只检查基准，不覆盖本地编辑。
 
-维护者先用 `python factory.py rules release-plan` 检查，再按明确发布指令执行 `rules publish`；日常本地修改不自动上传。
+维护者先执行 `python factory.py rules release-plan` 检查，按明确发布指令执行 `rules publish`；兼容参数独立更新，软件代码通过安装包分发。
