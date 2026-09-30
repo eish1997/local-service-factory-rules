@@ -1,9 +1,13 @@
 # 本地生活服务图片工厂：规则数据
 
-本仓库分发项目规则、场景变量和提示词配置，软件安装包在 [软件仓库](https://github.com/eish1997/local-service-factory-releases)。
+本仓库分发项目规则、场景变量和提示词配置；软件安装包在[软件仓库](https://github.com/eish1997/local-service-factory-releases)。
 
-规则版本 **1790730656981293500** 已正式发布：[规则 Release](https://github.com/eish1997/local-service-factory-rules/releases/tag/rules-1790730656981293500)。`release-index.json` 指向经过签名校验的最新版本，客户端会自动下载并激活。
+规则版本 **1790778405162892300**：[规则 Release](https://github.com/eish1997/local-service-factory-rules/releases/tag/rules-1790778405162892300)，最低软件版本 **1.4.1**。`release-index.json` 指向签名校验后的最新规则；客户端自动下载并原子激活。
 
-规则包包含 36 个白名单文件，8 个业务组装验证通过。已排除电话、API 凭证、机器路径和客户历史。规则 ZIP SHA256：`4243d3b40ec8ea068e511e039eb22df2fd966bdaaeeb6f468f5344b3e76e974a`。已验证真实公开下载、签名以及使用端同步。
+本次更新后处理模板与货车变量目录。后处理包含 18 个结构组合及模板内变化；汽车救援、货车救援的新共享批次自动轮换模板，电话居中放大，服务词允许独立颜色、描边、底板和轻微旋转。预设只定义设计参数，电话和服务内容仍取当前任务的确认数据。旧批次保留冻结版本，已有成品不会自动重做。
 
-维护者通过 `python factory.py rules release-plan` 检查，再按明确发布指令使用 `rules publish`。日常本地修改不自动上传。新批次使用当前激活规则，旧批次继续使用冻结版本。Python 提示词算法随软件发行，规则数据通过本仓库独立更新。
+规则包包含 **37 个白名单数据文件**，八业务组装检查通过。图片、电话、任务、预览记录、随机结果、凭证及机器路径不进入公开规则包。ZIP SHA256：`7d8952d831468b7166fb7d349dc6d6498a5f733fdbb70e3166b331c4c93f603a`。
+
+公开下载、Ed25519 签名以及隔离使用端「首次更新 → 再次已是最新」验证通过。软件代码通过安装包分发，兼容的规则参数通过本仓库更新。
+
+维护者先用 `python factory.py rules release-plan` 检查，再按明确发布指令执行 `rules publish`；日常本地修改不自动上传。
